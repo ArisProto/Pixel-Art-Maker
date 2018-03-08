@@ -1,0 +1,112 @@
+body {
+  text-align: center;
+  background: url("http://hdwpro.com/wp-content/uploads/2016/06/Metallic-Effect-Image.jpg")
+    center;
+  background-size: cover;
+  min-height: 150vh;
+  background-attachment: fixed;
+  font-family: fantasy, 'Open Sans';
+  color: #660000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  margin: 0.5em;
+}
+
+h2 {
+  margin: 0.6em 0 1em;
+}
+
+h3 {
+  margin: 0.6em 0 1em;
+}
+
+h3:first-of-type {
+  margin-top: 0.3em;
+}
+
+table,
+tr,
+td {
+    border: 2px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1 auto;
+}
+
+tr {
+    height: 15px;
+}
+td {
+    width: 15px;
+}
+
+input[type=number] {
+    text-align: center;
+    font-size: 14px;
+    width: 70px;
+    height: 25px;
+    border: 2px solid #202020;
+    border-radius: 2.5px;
+    margin: 5px;
+}
+
+input[type=button] {
+    background: none;
+    text-align: center;
+    font-size: 14px;
+    width: 70px;
+    height: 25px;
+    border: 2px solid #202020;
+    border-radius: 2.5px;
+}
+
+input[type=color] {
+  margin: 4%;
+  width: 125px;
+  height: 25px;
+  border: 2px solid #202020;
+  border-radius: 2.5px;
+}
+
+button {
+  background: none;
+  font-size: 14px;
+  color: #202020;
+  width: 70px;
+  height: 30px;
+  margin: 5px;
+  position: relative;
+  border: 2px solid #202020;
+  border-radius: 2.5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+	background: #202020;
+	color: white;
+}
+
+#toolsBox {
+  float: left;
+  width: 19%;
+  border: 3px solid #202020;
+  border-radius: 8px;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#pickSize {
+  margin: 10px;
+}
+
+.credits {
+  margin: 25px auto;
+  font-size: 0.7rem;
+  color: #660000;
+}
