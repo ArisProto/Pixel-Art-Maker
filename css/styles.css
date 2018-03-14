@@ -1,9 +1,8 @@
 body {
   text-align: center;
-  background: url("http://hdwpro.com/wp-content/uploads/2016/06/Metallic-Effect-Image.jpg")
-    center;
+  background: url("../images/Metallic-Effect-Image.jpg");
   background-size: cover;
-  min-height: 150vh;
+  min-height: 150px;
   background-attachment: fixed;
   font-family: fantasy, 'Open Sans';
   color: #660000;
