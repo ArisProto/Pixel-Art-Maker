@@ -1,37 +1,46 @@
+<!DOCTYPE html>
+
 <html>
-<head>
+
+  <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-</head>
-<body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <h1>My Pixel Art Maker</h1><nav>
-    </nav><h2>Let your Fantasy Loose!</h2>
-  <div id="toolsBox">
-    <h2>Choose Grid Size</h2>
-    <form id="pickSize">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+
+    <nav>
+      <h1>My Pixel Art Maker</h1>
+      <h2>Let your Fantasy Loose!</h2>
+    </nav>
+
+    <div id="toolsBox">
+      <h2>Choose Grid Size</h2>
+      <form id="pickSize">
         Height (Columns):<br>
         <input type="number" id="input_height" name="height" min="1" max="60" value="15"><br>
         Width (Rows):<br>
         <input type="number" id="input_width" name="width" min="1" max="60" value= "15" ><br>
-         <button type='submit' id="submit">Create</button>
-         <button type='button' id="reset">Reset</button>
-    </form>
+        <button type='submit' id="submit">Create</button>
+        <button type='button' id="reset">Reset</button>
+      </form>
+      <h3>Pick A Color</h3>
+      <input type="color" id="colorPicker">
+    </div>
 
-    <h3>Pick A Color</h3>
-    <input type="color" id="colorPicker">
-  </div>
-  <div id="gridSection">
-    <h3>Design your own Canvas!</h3>
-    <p>Draw with Left Click (hold and drag for a continuous swipe of colour!) and Erase with Right Click</p>
-    <table id="pixel_canvas"></table>
-    <p class="credits">
-      Made by <a href="https://discussions.udacity.com/u/ArisProto/summary" target="_blank" class="credit">
-        @ArisProto</a>
-    </p>
-    <script src="designs.js"></script>
-  </div>
-</body>
+    <div id="gridSection">
+      <h3>Design your own Canvas!</h3>
+      <p>
+        Draw with Left Click (hold and drag for a continuous swipe of colour!) and Erase with Right Click
+      </p>
+      <table id="pixel_canvas"></table>
+      <p class="credits">
+        Made by <a href="https://arisproto.github.io/Portfolio/" target="_blank" class="credit">@ArisProto</a>
+      </p>
+    </div>
+
+  </body>
+
 </html>

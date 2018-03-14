@@ -1,4 +1,5 @@
 //Welcome to my Pixel Art Project!
+
 const table = $('#pixel_canvas');
 const colorPicker = $('#colorPicker');
 const tableHeight = $('#input_height');
@@ -11,32 +12,39 @@ function makeGrid() {
     }
   }
 }
+
 table.on("click" , "td" , function(){
   $(this).css("background-color" , colorPicker.val());
 });
+
 table.on("contextmenu", "td", function() {
   $(this).css("background-color", "#C0C0C0");
   return false;
 });
+
 let mouseIsHold = false;
 table.on("mousedown", "td", function() {
   mouseIsHold = true;
   $(this).css("background-color", colorPicker.val());
 });
+
 table.on("mouseenter", "td", function() {
   if (mouseIsHold) {
     $(this).css("background-color", colorPicker.val());
   }
 });
+
 $('body').on("mouseup", function() {
   mouseIsHold = false;
 });
+
 $('#reset').click(function() {
   table.empty();
   colorPicker.val("#000000");
   tableHeight.val(15);
   tableWidth.val(15);
 });
+
 $('form').submit(function(e) {
   table.empty();
   e.preventDefault();
