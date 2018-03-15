@@ -29,12 +29,16 @@
           <section>
             <h2>Choose Grid Size</h2>
             <form class="form" id="pickSize">
-              Height (Columns):<br>
-              <input class="fs-span" type="number" id="grid_height" name="height" min="1" max="60" value="20"><br>
-              Width (Rows):<br>
-              <input class="fs-input" type="number" id="grid_width" name="width" min="1" max="60" value= "20" ><br>
-              <button class="form-submit-button" type='submit' id="submit-button">Create</button>
-              <button type='button' id="reset">Reset</button>
+              <fieldset class="fs">
+                <span class="fs-span">Grid Height:</span>
+                <input class="fs-input" id="grid-height" type="number" name="grid-height" min="1" max="60" value="20">
+              </fieldset>
+              <fieldset class="fs">
+                <span class="fs-span">Grid Width:</span>
+                <input class="fs-input" id="grid_width" type="number" name="grid-width" min="1" max="60" value= "20" >
+              </fieldset>
+                <button class="form-submit-button" type='submit' id="submit-button">Create</button>
+                <button type='button' id="reset">Reset</button>
             </form>
             <h3>Pick A Color</h3>
             <input type="color" id="colorPicker">
