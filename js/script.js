@@ -1,118 +1,125 @@
-// creating first grid when DOM is ready one time only
-$(window).on("load", function() {
-    makeGrid();
-});
+// execute code when document is ready
+$(function(){
 
-// listening to any clicks of td elements
-$(document).ready(function() {
-    $("#pixel_canvas td").on("click", function() {
-        value = $(this).css("background-color");
-        if (colorArray.length) {
-            var corectColor = hexToRgb(gameColor);
-            if (value == corectColor) {
-                score += 1;
-                game();
-                colorArray.splice(selectedColorElement, 1);
-                $(this).css('background-color', 'rgb(255,255,255)');
-            }
-        }
-    });
-});
+    const gridContainer = $("#container-grid");
+    const submitButton = $("#submit-grid");
+    const TD = $(".td");
 
-// select and store color input
-var colorPicker = $('#colorPicker');
-var selectedColor = colorPicker.val();
-var randomColorSave = "";
-var colorArray = [];
-var selectedColorElement = 0;
+    // declar global variables
+    var clicks = 0;
+    var gridHeight;
+    var gridWidth;
+    var table;
 
-// select imput submit_grid
-var imputGrid = $('#submit_grid');
+    // access DOM to select color picker
+    var colorPicker = $("#color");
 
-// rows and columns html code
-var row = '<tr></tr>';
-var column = '<td></td>';
+    /**
+    * @description adds background color to target element
+    * @param {string} target element
+    */
+    function color(target){
 
-// make grid function
-function makeGrid() {
-    resetTable(); // reset table
-    $('#error').remove(); // remove any old errors
-    pixelCanvas.children().remove();
-    var gridRows = height.val(); // get grid rows value
-    var gridColumns = wigth.val(); // get grid culumns value
-    // append to table if input is 50 or less
-    if (gridRows <= 50 && gridColumns <= 50) {
-        // Create rows
-        for (r = 1; r <= gridRows; r++) {
-            pixelCanvas.append(row);
-        }
-        // Create columns
-        for (c = 1; c <= gridColumns; c++) {
-            pixelCanvas.children().append(column);
-        }
-    } else if (gridRows > 50 && gridColumns > 50) {
-        $('h1').first().after('<p id="erorr" style="color:red;">Max row & column value is <= 50</p>');
-    } else if (gridRows > 50) {
-        $('h1').first().after('<p id="erorr" style="color:red;">Max row value is <= 50</p>');
-    } else if (gridColumns > 50) {
-        $('h1').first().after('<p id="erorr" style="color:red;">Max column value is <= 50</p>');
+        let color = colorPicker.val();
+
+        $(target).css("background-color", color);
+
     }
-}
 
-// event listener make new grid on click
-imputGrid.click(function(event) {
-    event.preventDefault(); // required to avoid submit and page reload
-    makeGrid();
-});
-
-//--- COLORING THE GRID ---//
-// geting changed color on imput
-colorPicker.change(function() {
-    selectedColor = $(this).val();
-});
-
-// draw and erase function
-function draw() {
-    var tableClick = $(this).data('tableClick');
-    if (!tableClick) {
-        // changing the background color of the cell
-        $(this).css('background-color', selectedColor);
-    } else {
-        // on second click reseting color of the cell to original
-        $(this).css('background-color', 'rgb(255,255,255)');
+    /**
+    * @description removes background color from target element
+    * @param {string} target element
+    */
+    function clearCell(target){
+        $(target).css("background-color", "");
     }
-    $(this).data('tableClick', !tableClick);
-}
 
-// function to draw or erase by clicking and draging
-function dragDrawAndErase() {
-    var mouseIsDown = true;
-    var tableClick = $(this).data('tableClick');
-    $('td')
-        .on('mouseleave', function() {
-            if (mouseIsDown) {
-                if (!tableClick) {
-                    // changing the background color of the cell
-                    $(this).css('backgroundColor', selectedColor);
-                } else {
-                    // on second click reseting color of the cell to original
-                    $(this).css('background-color', 'rgb(255,255,255)');
+    // fires event when form is submitted
+    $("form").submit(function makeGrid(e){
+
+        // prevent form default value to make grid creation possible
+        e.preventDefault();
+
+        if(table === undefined){
+            //store grids's height and width values prompted by the user
+            gridHeight = $("#grid-height").val();
+
+            gridWidth = $("#grid-width").val();
+
+            // creates HTML of table element
+            table = "<table class='table' id='table'>";
+
+            // iterates over rows
+            for (let r = 0; r < gridHeight; r ++) {
+
+                // creates HTML for rows
+                table += "<tr class='tr'>";
+
+                // iterates over each cell of current row
+                for (let c = 0; c < gridWidth; c++) {
+
+                    // creates HTML for columns
+                    table += ("<td class='td'></td>")
                 }
-                $(this).data('tableClick', !tableClick);
-            }
-        })
-        .on('mousedown', function() {
-            event.preventDefault();
-            mouseIsDown = true;
-        })
-        .on('mouseup', function() {
-            mouseIsDown = false;
-        });
-    pixelCanvas.on('mouseleave', function() {
-        mouseIsDown = false;
-    });
-}
+                // end of current row
 
-// listen for cell clicks
-pixelCanvas.on("click", "td", draw)
-    .on('mousedown', 'td', dragDrawAndErase);
+                // closes row element
+                table += "</tr>";
+            }
+            // for loop end, here grid is almost done
+
+            // closes table element. Now grid's HTML is done
+            table += "</table>";
+
+            // appends grid's HTML to its container div
+            gridContainer.append(table);
+
+            // changes button value to "Reset"
+            submitButton.attr("value", "Reset");
+
+        } else {
+
+            // deletes table element
+            $("#table").remove();
+
+            // resets table variable
+            table = undefined;
+
+            // resets submit button
+            submitButton.attr("value", "Make grid")
+        }
+
+    });
+
+    // fills clicked cell with color picked by user
+    // triggers function when user clicks on any cell
+    gridContainer.on("mousedown", ".td", function(){
+
+        color(this);
+
+    });
+
+    // clears cell on double click
+    gridContainer.on("dblclick", ".td", function(){
+
+        clearCell(this);
+
+    });
+
+    // on hover + shift clears multiple cells
+    // on hover + mouse left button colors multiple cells
+    gridContainer.on("mouseover", ".td", function(e){
+
+        if(e.shiftKey){
+
+            clearCell(this);
+
+        } else if(e.buttons == 1){
+
+            color(this);
+
+        }
+
+    });
+
+});
