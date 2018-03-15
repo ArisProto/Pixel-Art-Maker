@@ -4,6 +4,7 @@ const table = $('#pixel_canvas');
 const colorPicker = $('#colorPicker');
 const tableHeight = $('#input_height');
 const tableWidth = $('#input_width');
+
 function makeGrid() {
   for (let y = 0; y < tableHeight.val(); y++){
     table.append("<tr></tr>");
@@ -45,7 +46,7 @@ $('#reset').click(function() {
   tableWidth.val(15);
 });
 
-$('form').submit(function(e) {
+$('create').submit(function(e) {
   table.empty();
   e.preventDefault();
   makeGrid();
