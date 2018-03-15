@@ -173,6 +173,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-top: 1rem;
 }
 
 /* FOOTER */
