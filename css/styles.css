@@ -7,7 +7,6 @@ body {
   min-height: 150px;
   background-attachment: fixed;
   font-family: fantasy, 'Open Sans';
-  color: rgba(56, 9, 9, 1);
 }
 
 h1 {
@@ -92,7 +91,7 @@ button:hover {
 }
 
 .container_full {
-  color: #fff;
+  color: rgba(56, 9, 9, 1);
   background-color: transparent;
   padding: 10px 10px 10px 10px;
   display: flex;
