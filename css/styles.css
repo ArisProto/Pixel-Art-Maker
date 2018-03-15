@@ -168,6 +168,7 @@ button:hover {
   font-weight: 300;
   display: flex;
   justify-content: center;
+  color: #fff;
   width: 100%;
 }
 
