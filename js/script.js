@@ -46,7 +46,7 @@ $('#reset').click(function() {
   tableWidth.val(15);
 });
 
-$('create').submit(function(e) {
+$('submit').submit(function(e) {
   table.empty();
   e.preventDefault();
   makeGrid();
