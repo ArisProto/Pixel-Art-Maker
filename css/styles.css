@@ -7,7 +7,7 @@ body {
   min-height: 150px;
   background-attachment: fixed;
   font-family: fantasy, 'Open Sans';
-  color: #660000;
+  color: rgba(56, 9, 9, 1);
 }
 
 h1 {
@@ -141,6 +141,15 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
+}
+
+/* EXPLANATION */
+
+.container_explanation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 /* FOOTER */
