@@ -34,7 +34,7 @@ table, tr, td {
 
 table {
   border-collapse: collapse;
-  margin: 1 auto;
+  margin: auto;
 }
 
 tr {
@@ -123,6 +123,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   width: 20%;
+  height: 500px;
   border: 3px solid #202020;
   border-radius: 8px;
 }
