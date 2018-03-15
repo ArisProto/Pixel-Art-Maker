@@ -141,7 +141,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 
@@ -156,6 +156,13 @@ button:hover {
     height: 25px;
 }
 
+/* FILLER (next to canvas to the right) */
+
+.container_filler {
+  background: url('../images/Deadpool.jpg');
+  width: 20%;
+  height: 400px;
+}
 
 /* EXPLANATION */
 
