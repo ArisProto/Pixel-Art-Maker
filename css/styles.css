@@ -104,33 +104,40 @@ button:hover {
 /* HEADER */
 
 .container_header {
+  width: 100%;
+}
+
+/* MAIN */
+
+.container_main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
-/* CANVAS */
+  /* Tools */
 
-.container_grid {
+.tools {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-/* TOOLS */
-
-.container_tools {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   width: 20%;
-  height: 75%;
   border: 3px solid #202020;
   border-radius: 8px;
 }
 
 #pickSize {
   margin: 10px;
+}
+
+  /* Canvas */
+
+.container_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
 }
 
 /* FOOTER */
