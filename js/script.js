@@ -2,7 +2,7 @@
 $(function(){
 
     const gridContainer = $("#grid-container");
-    const submitButton = $("#submit-grid");
+    const submitButton = $("#submit-button");
     const TD = $(".td");
 
     // declar global variables
