@@ -179,6 +179,19 @@ button:hover {
   font-size: 12px;
 }
 
+/* SOCIAL MEDIA */
+
+@font-face {
+  font-family: 'si';
+  src: url('../images/Social Media Icons/socicon.eot');
+  src: url('../images/Social Media Icons/socicon.eot?#iefix') format('embedded-opentype'),
+       url('../images/Social Media Icons/socicon.woff') format('woff'),
+       url('../images/Social Media Icons/socicon.ttf') format('truetype'),
+       url('../images/Social Media Icons/socicon.svg#icomoonregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
       font-family: si;
