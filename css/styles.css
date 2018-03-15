@@ -159,7 +159,13 @@ button:hover {
 /* FILLER (next to canvas to the right) */
 
 .container_filler {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background: url('../images/Deadpool.png');
+  background-size: cover;
+  background-position-x: -320px;
+  background-position-y: center;
   width: 19%;
   height: 400px;
   border-radius: 0.5rem;
