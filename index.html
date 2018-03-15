@@ -1,5 +1,81 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel Art Maker</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/apple-icon-114x114.png">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Raleway" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery 3.2.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="design.js"></script>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <section class="header-section">
+            <h1 class="title">Pixel Art<br>
+            <h1 class="title">Maker</h1>
+            <audio controls class="audio">
+                <source src="funk.ogg" type="audio/ogg"/>
+                <!-- displays when browser doesn't support <a href=""></a>udio element -->
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section class="main">
+            <form class="form" id="create-a-grid">
+                <fieldset class="fs">
+                    <span class="fs-span">Grid Height:</span>
+                    <input class="fs-input" type="number" min="1" max="42" name="grid-height" id="grid-height" value="20">
+                </fieldset>
+                <fieldset class="fs">
+                    <span class="fs-span">Grid Width:</span>
+                    <input class="fs-input" type="number" min="1" max="42" name="grid-width" id="grid-width" value="20">
+                </fieldset>
+
+                <input class="form-submit-button" id="submit-button" type="submit" value="Make grid">
+            </form>
+            <div class="color-picker" id="pick-a-color">
+                <p>Pick a color</p>
+                <input type="color" id="color" value="#462b71">
+            </div>
+            <div class="instruction-container">
+                <span class="instruction-span">Instructions</span>
+                <ul class="instruction-list">
+                    <li class="instruction-item">click on a pixel to color it</li>
+                    <li class="instruction-item">double click it to clear it</li>
+                    <li class="instruction-item">hold left mouse button and drag it o color multiple pixels</li>
+                    <li class="instruction-item">hold shift key and drag mouse to clear multiple pixels </li>
+                    <li class="instruction-item">click on Reset button to clear the entire grid</li>
+                </ul>
+            </div>
+            <div class="container" id="grid-container"></div>
+        </section>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
 <html>
 
   <head>
@@ -78,3 +154,4 @@
   </body>
 
 </html>
+-->
