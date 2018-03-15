@@ -142,7 +142,20 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
+  height: auto;
 }
+
+.table {
+    width: auto;
+    margin: 0 auto;
+}
+.td {
+    border: 1px solid black;
+    background: pink;
+    width: 25px;
+    height: 25px;
+}
+
 
 /* EXPLANATION */
 
