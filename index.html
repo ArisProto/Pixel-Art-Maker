@@ -11,12 +11,12 @@
 
   <body>
 
-    <nav>
+    <header class="container_header">
       <h1>My Pixel Art Maker</h1>
       <h2>Let your Fantasy Loose!</h2>
-    </nav>
+    </header>
 
-    <div id="toolsBox">
+    <section class="container_tools">
       <h2>Choose Grid Size</h2>
       <form id="pickSize">
         Height (Columns):<br>
@@ -28,18 +28,32 @@
       </form>
       <h3>Pick A Color</h3>
       <input type="color" id="colorPicker">
-    </div>
+    </section>
 
-    <div id="gridSection">
+    <section class="container_grid">
       <h3>Design your own Canvas!</h3>
       <p>
         Draw with Left Click (hold and drag for a continuous swipe of colour!) and Erase with Right Click
       </p>
       <table id="pixel_canvas"></table>
-      <p class="credits">
-        Made by <a href="https://arisproto.github.io/Portfolio/" target="_blank" class="credit">@ArisProto</a>
-      </p>
+    </section>
+
+    <div class="container_footer">
+      <footer>
+        <h2 class="title_contact">Contact Me</h2>
+          <ul class="soc">
+            <li><a target="_blank" class="soc-mail" href="mailto:aris.protopapas@gmail.com"></a></li>
+            <li><a target="_blank" class="soc-github" href="https://github.com/ArisProto"></a></li>
+            <li><a target="_blank" class="soc-linkedin" href="https://www.linkedin.com/in/arisproto/"></a></li>
+            <li><a target="_blank" class="soc-facebook" href="https://www.facebook.com/aris.protopapas"></a></li>
+            <li><a target="_blank" class="soc-twitter" href="#"></a></li>
+            <li><a target="_blank" class="soc-stackoverflow" href="https://stackoverflow.com/users/9492385/arisproto"></a></li>
+            <li><a target="_blank" class="soc-reddit soc-icon-last" href="https://www.reddit.com/user/Swoosherino"></a></li>
+          </ul>
+        <p class="copyright">© Copyright 2018 by Aris Protopapas. All rights reserved.</p>
+      </footer>
     </div>
+
 
   </body>
 

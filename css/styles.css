@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 body {
   text-align: center;
   background: url("../images/Metallic-Effect-Image.jpg");
@@ -89,17 +91,157 @@ button:hover {
 	color: white;
 }
 
-#toolsBox {
-  float: left;
-  width: 19%;
+/* HEADER */
+
+.container_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CANVAS */
+
+.container_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* TOOLS */
+
+.container_tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 20%;
+  height: 75%;
   border: 3px solid #202020;
   border-radius: 8px;
-  margin-left: 5%;
-  margin-top: 5%;
 }
 
 #pickSize {
   margin: 10px;
+}
+
+/* FOOTER */
+
+.container_footer {
+  background-color: rgba(56, 9, 9, 1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 15%;
+  width:100%;
+}
+
+.title_contact{
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.copyright {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 12px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: si;
+      src: url('../images/Social Media Icons/socicon.svg') format(svg);
+    }
+}
+
+.soc {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+.soc li {
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+.soc li a {
+  font-family: si!important;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -o-transition: .1s;
+  -ms-transition: .1s;
+  -moz-transition: .1s;
+  -webkit-transition: .1s;
+  transition: .1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 19px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin-right: 12px;
+  color: #ffffff;
+  background-color: #d22121;
+}
+
+.soc a:hover {
+  z-index: 2;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.soc-icon-last{
+  margin: 0 !important;
+}
+
+.soc-mail:before {
+  content: '\e01f';
+}
+.soc-github:before {
+  content: '\e030';
+}
+.soc-linkedin:before {
+  content: '\e049';
+}
+.soc-facebook:before {
+  content: '\e041';
+}
+.soc-twitter:before {
+  content: '\e040';
+}
+.soc-stackoverflow:before {
+  content:'\e007';
+}
+.soc-reddit:before {
+  content: '\e022';
 }
 
 .credits {
