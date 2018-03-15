@@ -1,7 +1,7 @@
 // execute code when document is ready
 $(function(){
 
-    const gridContainer = $("#container-grid");
+    const gridContainer = $("#pixel_canvas");
     const submitButton = $("#submit-grid");
     const TD = $(".td");
 
