@@ -74,12 +74,12 @@ input[type=color] {
 button {
   background: none;
   font-size: 14px;
-  color: #202020;
+  color: #fff;
   width: 70px;
   height: 30px;
   margin: 5px;
   position: relative;
-  border: 2px solid #202020;
+  border: 2px solid #fff;
   border-radius: 2.5px;
   cursor: pointer;
   font-weight: bold;
@@ -125,7 +125,7 @@ button:hover {
   width: 19%;
   height: 400px;
   color: #fff;
-  background-color: rgba(56, 9, 9, 1);
+  background-color: rgba(106, 19, 19, 1);
   border: 3px solid #202020;
   border-radius: 8px;
   margin-bottom: 1rem;
