@@ -159,7 +159,7 @@ button:hover {
 /* FILLER (next to canvas to the right) */
 
 .container_filler {
-  background: url('../images/Deadpool.jpg');
+  background: url('../images/Deadpool.png');
   width: 20%;
   height: 400px;
   border-radius: 0.5rem;
