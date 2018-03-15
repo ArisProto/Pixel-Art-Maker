@@ -91,6 +91,16 @@ button:hover {
 	color: white;
 }
 
+.container_full {
+  color: #fff;
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 /* HEADER */
 
 .container_header {
