@@ -13,80 +13,40 @@
 </head>
 
 <body>
-    <div class="container_full">
+  <div class="container_full">
 
-        <div class="container_header">
-          <header>
-            <h1>My Pixel Art Maker</h1>
-            <h2>Let your Fantasy Loose!</h2>
-          </header>
-        </div>
-
-        <section class="main">
-            <form class="form" id="create-a-grid">
-                <fieldset class="fs">
-                    <span class="fs-span">Grid Height:</span>
-                    <input class="fs-input" type="number" min="1" max="42" name="grid-height" id="grid-height" value="20">
-                </fieldset>
-                <fieldset class="fs">
-                    <span class="fs-span">Grid Width:</span>
-                    <input class="fs-input" type="number" min="1" max="42" name="grid-width" id="grid-width" value="20">
-                </fieldset>
-
-                <input class="form-submit-button" id="submit-button" type="submit" value="Make grid">
-            </form>
-            <div class="color-picker" id="pick-a-color">
-                <p>Pick a color</p>
-                <input type="color" id="color" value="#462b71">
-            </div>
-            <div class="instruction-container">
-                <span class="instruction-span">Instructions</span>
-                <ul class="instruction-list">
-                    <li class="instruction-item">click on a pixel to color it</li>
-                    <li class="instruction-item">double click it to clear it</li>
-                    <li class="instruction-item">hold left mouse button and drag it o color multiple pixels</li>
-                    <li class="instruction-item">hold shift key and drag mouse to clear multiple pixels </li>
-                    <li class="instruction-item">click on Reset button to clear the entire grid</li>
-                </ul>
-            </div>
-            <div class="container" id="grid-container"></div>
-        </section>
-
+    <div class="container_header">
+      <header>
+        <h1>My Pixel Art Maker</h1>
+        <h2>Let your Fantasy Loose!</h2>
+      </header>
     </div>
-</body>
 
-</html>
+    <section class="container_main">
+      <div class="tools">
+        <section>
+          <h2>Choose Grid Size</h2>
+          <form class="form" id="create-a-grid">
+            <fieldset class="fs">
+              <span class="fs-span">Grid Height:</span>
+              <input class="fs-input" id="grid-height" type="number" name="grid-height" min="1" max="60" value="20">
+            </fieldset>
+            <fieldset class="fs">
+              <span class="fs-span">Grid Width:</span>
+              <input class="fs-input" id="grid_width" type="number" name="grid-width" min="1" max="60" value= "20" >
+            </fieldset>
 
+            <input class="form-submit-button" id="submit-button" type="submit" value="Make grid">
 
-
-
-
-<!--
-
-      <section class="container_main">
-        <div class="tools">
-          <section>
-            <h2>Choose Grid Size</h2>
-            <form class="form" id="pickSize">
-              <fieldset class="fs">
-                <span class="fs-span">Grid Height:</span>
-                <input class="fs-input" id="grid-height" type="number" name="grid-height" min="1" max="60" value="20">
-              </fieldset>
-              <fieldset class="fs">
-                <span class="fs-span">Grid Width:</span>
-                <input class="fs-input" id="grid_width" type="number" name="grid-width" min="1" max="60" value= "20" >
-              </fieldset>
-                <button class="form-submit-button" type='submit' id="submit-button">Create</button>
-                <button type='button' id="reset">Reset</button>
-            </form>
             <h3>Pick A Color</h3>
-            <input type="color" id="colorPicker">
-          </section>
-        </div>
+            <div class="color-picker" id="pick-a-color">
+              <input type="color" id="colorPicker" value="#240c49">
+            </div>
+          </form>
+        </section>
+      </div>
 
-        <div class="container_grid" id="grid-container"></div>
-
-      </section>
+      <div class="container_grid" id="grid-container"></div>
 
       <div class="container_explanation">
         <section>
@@ -96,25 +56,7 @@
           </p>
         </section>
       </div>
+    </section>
 
-      <div class="container_footer">
-        <footer>
-          <h2 class="title_contact">Get in touch with me</h2>
-            <ul class="soc">
-              <li><a target="_blank" class="soc-mail" href="mailto:aris.protopapas@gmail.com"></a></li>
-              <li><a target="_blank" class="soc-github" href="https://github.com/ArisProto"></a></li>
-              <li><a target="_blank" class="soc-linkedin" href="https://www.linkedin.com/in/arisproto/"></a></li>
-              <li><a target="_blank" class="soc-facebook" href="https://www.facebook.com/aris.protopapas"></a></li>
-              <li><a target="_blank" class="soc-twitter" href="#"></a></li>
-              <li><a target="_blank" class="soc-stackoverflow" href="https://stackoverflow.com/users/9492385/arisproto"></a></li>
-              <li><a target="_blank" class="soc-reddit soc-icon-last" href="https://www.reddit.com/user/Swoosherino"></a></li>
-            </ul>
-          <p class="copyright">© Copyright 2018 by Aris Protopapas. All rights reserved.</p>
-        </footer>
-      </div>
-
-    </div>
-  </body>
-
-</html>
--->
+  </div>
+</body>
