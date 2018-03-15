@@ -36,7 +36,7 @@ var column = '<td></td>';
 // make grid function
 function makeGrid() {
     resetTable(); // reset table
-    $('#erorr').remove(); // remove any old errors
+    $('#error').remove(); // remove any old errors
     pixelCanvas.children().remove();
     var gridRows = height.val(); // get grid rows value
     var gridColumns = wigth.val(); // get grid culumns value
