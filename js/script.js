@@ -91,35 +91,35 @@ $(function(){
 
     });
 
-    // fills clicked cell with color picked by user
-    // triggers function when user clicks on any cell
-    gridContainer.on("mousedown", ".td", function(){
+  // fills clicked cell with color picked by user
+   // triggers function when user clicks on any cell
+   gridContainer.on("mousedown", ".td", function(){
 
-        color(this);
+       color(this);
 
-    });
+   });
 
-    // clears cell on double click
-    gridContainer.on("dblclick", ".td", function(){
+   // clears cell on double click
+   gridContainer.on("dblclick", ".td", function(){
 
-        clearCell(this);
+       clearCell(this);
 
-    });
+   });
 
-    // on hover + shift clears multiple cells
-    // on hover + mouse left button colors multiple cells
-    gridContainer.on("mouseover", ".td", function(e){
+   // on hover + shift clears multiple cells
+   // on hover + mouse left button colors multiple cells
+   gridContainer.on("mouseover", ".td", function(e){
 
-        if(e.shiftKey){
+       if(e.shiftKey){
 
-            clearCell(this);
+           clearCell(this);    
 
-        } else if(e.buttons == 1){
+       } else if(e.buttons == 1){
 
-            color(this);
+           color(this);
 
-        }
+       }
 
-    });
+   });
 
 });
