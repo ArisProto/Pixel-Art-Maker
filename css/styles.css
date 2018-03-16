@@ -53,7 +53,7 @@ input[type=number] {
   margin: 5px;
 }
 
-input[type=button] {
+input[type=button], input[type=submit] {
   background: none;
   font-size: 14px;
   color: #fff;
