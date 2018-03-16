@@ -71,13 +71,17 @@ input[type=color] {
   border-radius: 0.5rem;
 }
 
+fieldset {
+  border: none;
+}
+
 button {
   background: none;
   font-size: 14px;
   color: #fff;
   width: 70px;
   height: 30px;
-  margin: 5px;
+  margin: 10px;
   position: relative;
   border: 2px solid #fff;
   border-radius: 0.5rem;
