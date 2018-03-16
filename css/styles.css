@@ -71,10 +71,6 @@ input[type=color] {
   border-radius: 0.5rem;
 }
 
-fieldset {
-  border: 2px solid #202020;
-}
-
 button {
   background: none;
   font-size: 14px;
