@@ -55,28 +55,6 @@ input[type=number] {
 
 input[type=button] {
   background: none;
-  text-align: center;
-  font-size: 14px;
-  width: 70px;
-  height: 25px;
-  border: 2px solid #202020;
-  border-radius: 0.5rem;
-}
-
-input[type=color] {
-  margin: 4%;
-  width: 125px;
-  height: 25px;
-  border: 2px solid #202020;
-  border-radius: 0.5rem;
-}
-
-fieldset {
-  border: 2px solid #202020;
-}
-
-button {
-  background: none;
   font-size: 14px;
   color: #fff;
   width: 55%;
@@ -89,9 +67,16 @@ button {
   font-weight: bold;
 }
 
-button:hover {
-	background: #202020;
-	color: white;
+input[type=color] {
+  margin: 4%;
+  width: 125px;
+  height: 25px;
+  border: 2px solid #202020;
+  border-radius: 0.5rem;
+}
+
+fieldset {
+  border: 2px solid #202020;
 }
 
 .container_full {
