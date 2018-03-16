@@ -164,7 +164,7 @@ button:hover {
   justify-content: center;
   background: url('../images/Deadpool.png');
   background-size: cover;
-  background-position-x: -320px;
+  background-position-x: center;
   background-position-y: center;
   width: 19%;
   height: 400px;
