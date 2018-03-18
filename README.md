@@ -1,2 +1,2 @@
 # Pixel-Art-Maker
-Udaicity Project: Pixel Art Maker
+Udacity Project: Pixel Art Maker
